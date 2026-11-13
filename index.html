@@ -52,7 +52,7 @@
     .category-index{align-self:start;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.16em}
     .category-heading h2{margin:0;font-size:clamp(42px,6.7vw,102px);font-weight:800;letter-spacing:-.075em;line-height:.9}
     .category-heading .eyebrow{text-align:right}
-    .recipe-card{padding-top:clamp(50px,7vw,100px);padding-bottom:clamp(60px,8vw,120px);border-bottom:1px solid var(--line)}
+    .recipe-card{padding-top:clamp(50px,7vw,100px);padding-bottom:clamp(60px,8vw,120px);border-bottom:1px solid var(--line);scroll-margin-top:40px}
     .recipe-card:last-child{border-bottom:0;padding-bottom:0}
     .recipe-intro{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:clamp(30px,4vw,60px)}
     .recipe-intro h3{max-width:980px;margin:12px 0 0;font-size:clamp(38px,5.5vw,86px);font-weight:800;letter-spacing:-.07em;line-height:.96}
@@ -1045,13 +1045,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const recipeCards = document.querySelectorAll('.recipe-card');
   const sections = document.querySelectorAll('.category-section');
 
-  const recipeTitles = Array.from(recipeCards).map(card => card.querySelector('h3').textContent);
+  const recipeTitles = Array.from(recipeCards).map(card => card.querySelector('h3').textContent.trim());
+
+  // Функция для плавной прокрутки к рецепту
+  function scrollToRecipe(titleText) {
+    const targetCard = Array.from(recipeCards).find(card => card.querySelector('h3').textContent.trim() === titleText);
+    if (targetCard) {
+      setTimeout(() => {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150); // Небольшая задержка, чтобы фильтр успел отработать
+    }
+  }
 
   searchInput.addEventListener('input', function(e) {
     const searchText = e.target.value.toLowerCase().trim();
     autocompleteList.innerHTML = '';
     let hasVisibleRecipes = false;
 
+    // Фильтрация карточек
     sections.forEach(section => {
       let sectionHasVisible = false;
       section.querySelectorAll('.recipe-card').forEach(recipe => {
@@ -1067,6 +1078,7 @@ document.addEventListener('DOMContentLoaded', function() {
       section.style.display = sectionHasVisible ? '' : 'none';
     });
 
+    // Выпадающий список подсказок
     if (searchText.length > 0) {
       const matches = recipeTitles.filter(title => title.toLowerCase().includes(searchText)).slice(0, 3);
       
@@ -1078,10 +1090,13 @@ document.addEventListener('DOMContentLoaded', function() {
           div.style.cssText = 'padding: 15px; color: #aaa9a5; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 16px;';
           div.onmouseover = () => div.style.background = 'rgba(255,255,255,.05)';
           div.onmouseout = () => div.style.background = 'transparent';
+          
+          // Клик по подсказке
           div.onclick = () => {
             searchInput.value = match;
             autocompleteList.style.display = 'none';
-            searchInput.dispatchEvent(new Event('input'));
+            searchInput.dispatchEvent(new Event('input')); // Запускаем фильтр
+            scrollToRecipe(match); // Прокручиваем к рецепту
           };
           autocompleteList.appendChild(div);
         });
@@ -1093,6 +1108,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Прокрутка при нажатии Enter в поле поиска
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Предотвращаем стандартное поведение
+      const firstVisibleRecipe = Array.from(recipeCards).find(card => card.style.display !== 'none');
+      if (firstVisibleRecipe) {
+        firstVisibleRecipe.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+
+  // Скрываем подсказки при клике вне поиска
   document.addEventListener('click', function(e) {
     if (e.target !== searchInput) autocompleteList.style.display = 'none';
   });

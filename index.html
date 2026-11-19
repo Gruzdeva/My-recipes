@@ -65,7 +65,7 @@
     .note-block strong { color: var(--text); font-weight: 600; }
     .panel h4{margin:8px 0 0;font-size:clamp(29px,3vw,45px);font-weight:800;letter-spacing:-.055em;line-height:1}
     .ingredients-list,.steps{margin:0;padding:0;list-style:none}
-    .ingredients-list li{border-top:1px solid var(--soft-line);padding:17px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.4;overflow-wrap:anywhere;text-transform:capitalize}
+    .ingredients-list li{border-top:1px solid var(--soft-line);padding:17px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.4;overflow-wrap:anywhere;}
     .ingredients-list li:last-child,.steps li:last-child{border-bottom:1px solid var(--soft-line)}
     .steps{counter-reset:step}
     .steps li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:clamp(15px,2vw,28px);border-top:1px solid var(--soft-line);padding:20px 0 22px;color:#e7e6e2;font-size:clamp(17px,1.35vw,20px);line-height:1.5}
@@ -77,7 +77,7 @@
     .back-top{border:1px solid var(--line);padding:12px 16px;font-size:11px;font-weight:700;letter-spacing:.13em;text-decoration:none;text-transform:uppercase;transition:background .2s,border-color .2s}
     .floating-btn{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--surface);border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--accent);font-size:20px;z-index:1000}
     @media(max-width:950px){.topline{display:block}.category-nav{justify-content:flex-start;margin-top:24px}.recipe-grid{grid-template-columns:1fr}.cover::before{width:80vw;right:-34%;top:13%}.category-heading{grid-template-columns:42px minmax(0,1fr)}.category-heading .eyebrow{grid-column:2;text-align:left}h1{font-size:clamp(60px,10.5vw,90px)}}
-    @media(max-width:560px){.cover{padding-bottom:28px}.cover-main{padding:90px 0 44px}h1{font-size:clamp(42px,11vw,62px);margin:22px 0 30px}.bottomline{align-items:flex-start;flex-direction:column}.author{min-width:0;width:100%}.features{grid-template-columns:1fr;gap:7px}.feature-card{min-height:90px;padding:10px}.card-top .eyebrow{font-size:8px}.feature-card strong{font-size:clamp(15px,4vw,22px);overflow-wrap:anywhere}.collection-top,.recipe-intro{align-items:flex-start;flex-direction:column}.collection-top>.eyebrow{text-align:left}.category-heading{gap:10px}.category-heading h2{font-size:clamp(38px,9vw,58px);overflow-wrap:anywhere}.panel{padding:24px}.panel-head{flex-wrap:wrap}.steps li{grid-template-columns:30px minmax(0,1fr)}.footer{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.note-block{display:block !important}.cover{padding-bottom:28px}.cover-main{padding:90px 0 44px}h1{font-size:clamp(42px,11vw,62px);margin:22px 0 30px}.bottomline{align-items:flex-start;flex-direction:column}.author{min-width:0;width:100%}.features{grid-template-columns:1fr;gap:7px}.feature-card{min-height:90px;padding:10px}.card-top .eyebrow{font-size:8px}.feature-card strong{font-size:clamp(15px,4vw,22px);overflow-wrap:anywhere}.collection-top,.recipe-intro{align-items:flex-start;flex-direction:column}.collection-top>.eyebrow{text-align:left}.category-heading{gap:10px}.category-heading h2{font-size:clamp(38px,9vw,58px);overflow-wrap:anywhere}.panel{padding:24px}.panel-head{flex-wrap:wrap}.steps li{grid-template-columns:30px minmax(0,1fr)}.footer{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     .magazine-recipe { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
     .magazine-image { width: 100%; height: 100%; max-height: 400px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); }
@@ -235,7 +235,7 @@
                 <ol class="steps">
                   <li>Поджарьте чёрный хлеб.</li>
                   <li>Подготовьте и нарежьте остальные продукты.</li>
-                  <li>Соберите брускетту в следующей последовательности: хлеб → сливочный (или творожный) сыр → красная рыба → авокадо → кунжут. По желанию полейте лимонным соком.</li>
+                  <li>Соберите брускетту в следующей последовательности: хлеб → сливочный (или творожный) сыр → красная рыба → авокадо → кунжут. По желанию полейте лимонным соком. Авокадо можно размять вилкой для более нежной текстуры.</li>
                 </ol>
                 <div class="note-block">
                   Заметка: Разрешается дополнять рецепт.
@@ -362,7 +362,7 @@
                   
                 </div>
                 <ol class="steps">
-                  <li>Протрите творог через сито или измельчите блендером.</li>
+                  <li>Протрите творог, добавьте желток, сахар, ванилин и рисовую муку, перемешайте.</li>
                   <li>Сформируйте сырники. Для ровной формы можно использовать стакан; рабочую поверхность присыпьте рисовой мукой.</li>
                   <li>Обжарьте сырники на кокосовом масле до золотистой корочки.</li>
                 </ol>
@@ -537,7 +537,7 @@
             <div class="recipe-intro">
               <div>
                 <p class="eyebrow">Блюдо с макаронами</p>
-                <h3>Блюдо с макаронами в сливочном соусе</h3>
+                <h3>Макароны в сливочном соусе.</h3>
               </div>
               <span class="badge">02 / Рецепт</span>
             </div>
@@ -629,7 +629,7 @@
                   
                 </div>
                 <ol class="steps">
-                  <li>Сварите рис. Разделите куриное филе, посыпьте специями и мукой, обжарьте до золотистой корочки и уберите со сковороды.</li>
+                  <li>Сварите рис. Разделите куриное филе на две части, посыпьте специями и мукой, обжарьте до золотистой корочки и уберите со сковороды.</li>
                   <li>Обжарьте лук с чесноком. Добавьте томатную пасту и вяленые томаты, затем воду и сливки.</li>
                   <li>Добавьте шпинат, соль и перец. Верните курицу в соус и всыпьте тёртый пармезан.</li>
                   <li>Подавайте курицу с рисом, укропом и сыром.</li>
@@ -679,7 +679,7 @@
                 </div>
                 <ol class="steps">
                   <li>Отделите желтки от белков. Смешайте желтки с молоком и просеянной мукой.</li>
-                  <li>Взбейте белки с солью и сахаром, затем аккуратно соедините с желтковой смесью.</li>
+                  <li>Взбейте белки с солью и сахаром до твердых пиков, затем аккуратно соедините с желтковой смесью.</li>
                   <li>Жарьте блинчики под крышкой с двух сторон. Чтобы они получились высокими, используйте кольца.</li>
                 </ol>
                 <div class="note-block">
@@ -740,8 +740,11 @@
                   <li>Сварите рис. Смешайте фарш с панировочными сухарями, чесноком, кунжутным маслом, яйцом, соевым соусом и луком.</li>
                   <li>Сформируйте фрикадельки и выпекайте 15 минут при 200&nbsp;°C.</li>
                   <li>Смешайте ингредиенты соуса и доведите его до кипения на слабом огне. Добавьте фрикадельки и обваляйте их в соусе.</li>
-                  <li>Обжарьте брокколи и подавайте фрикадельки с рисом.</li>
+                  <li>Подавайте фрикадельки с рисом.</li>
                 </ol>
+                <div class="note-block">
+                  Заметка: Отлично дополнят блюдо обжаренные брокколи.
+                </div>
               </section>
             </div>
           </article>
@@ -822,7 +825,7 @@
                 <ol class="steps">
                   <li>На пергамент выложите мёд, сливочное масло и тонкие дольки яблок. Посыпьте сахаром и корицей.</li>
                   <li>Накройте начинку слоёным тестом и смажьте яичным желтком.</li>
-                  <li>Выпекайте 20–40 минут при 200&nbsp;°C, затем переверните.</li>
+                  <li>Выпекайте 20–40 минут при 200&nbsp;°C.</li>
                 </ol>
               </section>
             </div>
@@ -861,7 +864,7 @@
                 </div>
                 <ol class="steps">
                   <li>Влейте эспрессо в йогурт и перемешайте. Посыпьте корицей.</li>
-                  <li>Разломите печенье савоярди, погрузите в йогурт, накройте и уберите в холодильник на 12 часов.</li>
+                  <li>Разломите печенье савоярди пополам, погрузите в йогурт, накройте и уберите в холодильник на 12 часов.</li>
                 </ol>
               </section>
             </div>

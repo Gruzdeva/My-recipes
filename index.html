@@ -65,7 +65,10 @@
     .note-block strong { color: var(--text); font-weight: 600; }
     .panel h4{margin:8px 0 0;font-size:clamp(29px,3vw,45px);font-weight:800;letter-spacing:-.055em;line-height:1}
     .ingredients-list,.steps{margin:0;padding:0;list-style:none}
-    .ingredients-list li{border-top:1px solid var(--soft-line);padding:17px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.4;overflow-wrap:anywhere;}
+    .ingredients-list li{border-top:1px solid var(--soft-line);padding:17px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.4;overflow-wrap:anywhere;word-break:keep-all;hyphens:none;}
+    .ingredients-list li::first-letter {
+      text-transform: uppercase;
+    }
     .ingredients-list li:last-child,.steps li:last-child{border-bottom:1px solid var(--soft-line)}
     .steps{counter-reset:step}
     .steps li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:clamp(15px,2vw,28px);border-top:1px solid var(--soft-line);padding:20px 0 22px;color:#e7e6e2;font-size:clamp(17px,1.35vw,20px);line-height:1.5}
@@ -175,9 +178,9 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Кабачок 1–2 шт.</li>
+                  <li>Кабачок 1–2&nbsp;шт.</li>
                   <li>сыр</li>
-                  <li>яйца около 2 шт.</li>
+                  <li>яйца около 2&nbsp;шт.</li>
                 </ul>
               </section>
               <section class="panel">
@@ -244,12 +247,13 @@
             </div>
           </article>
           <article class="recipe-card">
-            <div class="recipe-intro">
+            <div class="magazine-recipe">
+              <img src="pancakes.jpg" class="magazine-image" alt="Панкейки">
               <div>
-                <p class="eyebrow">Завтраки</p>
-                <h3>Панкейки</h3>
+                <p class="eyebrow" style="color: var(--accent); margin-bottom: 15px;">Завтраки</p>
+                <h3 style="max-width: 100%; margin: 0 0 20px 0; font-size: clamp(38px, 4vw, 60px); font-weight: 800; letter-spacing: -0.07em; line-height: 0.96;">Панкейки.</h3>
+                <span class="badge">04 / Рецепт</span>
               </div>
-              <span class="badge">04 / Рецепт</span>
             </div>
             <div class="recipe-grid">
               <section class="panel">
@@ -261,11 +265,11 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Кефир 250 г</li>
+                  <li>Кефир 250&nbsp;г</li>
                   <li>сода ½ ч. л.</li>
-                  <li>яйца 2 шт.</li>
-                  <li>сахар 50–100 г</li>
-                  <li>мука 200–270 г</li>
+                  <li>яйца 2&nbsp;шт.</li>
+                  <li>сахар 50–100&nbsp;г</li>
+                  <li>мука 200–270&nbsp;г</li>
                   <li>растительное масло.</li>
                 </ul>
               </section>
@@ -304,11 +308,11 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Отварные яйца 4 шт.</li>
+                  <li>Отварные яйца 4&nbsp;шт.</li>
                   <li>зелёный лук</li>
-                  <li>сыр 120 г</li>
-                  <li>сырые яйца 2 шт.</li>
-                  <li>мука 3 ст. л.</li>
+                  <li>сыр 120&nbsp;г</li>
+                  <li>сырые яйца 2&nbsp;шт.</li>
+                  <li>мука 3&nbsp;ст. л.</li>
                   <li>соль.</li>
                 </ul>
               </section>
@@ -345,10 +349,10 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Творог 400 г</li>
+                  <li>Творог 400&nbsp;г</li>
                   <li>кокосовое масло</li>
-                  <li>желток 1 шт.</li>
-                  <li>рисовая мука 20–30 г</li>
+                  <li>желток 1&nbsp;шт.</li>
+                  <li>рисовая мука 20–30&nbsp;г</li>
                   <li>ванилин</li>
                   <li>сахар.</li>
                 </ul>
@@ -443,22 +447,22 @@
                 </div>
                 <ul class="ingredients-list">
                   <li class="ingredient-group">Для фрикаделек:</li>
-                  <li>Лук 1 шт. (200 г)</li>
-                  <li>Панировочные сухари 40 г</li>
-                  <li>Говяжий фарш 600 г</li>
+                  <li>Лук 1&nbsp;шт. (200&nbsp;г)</li>
+                  <li>Панировочные сухари 40&nbsp;г</li>
+                  <li>Говяжий фарш 600&nbsp;г</li>
                   <li>Яйцо</li>
                   <li>Соль</li>
                   <li>Чёрный перец</li>
-                  <li>Вустерский соус 1 ст. л.</li>
-                  <li>Сушёный чеснок 1 ч. л.</li>
-                  <li>Петрушка 2 ст. л.</li>
+                  <li>Вустерский соус 1&nbsp;ст. л.</li>
+                  <li>Сушёный чеснок 1&nbsp;ч. л.</li>
+                  <li>Петрушка 2&nbsp;ст. л.</li>
                   <li>Гарнир по выбору</li>
                   <li class="ingredient-group">Для соуса:</li>
-                  <li>Сливочное масло 20 г</li>
-                  <li>Лук 2 шт.</li>
+                  <li>Сливочное масло 20&nbsp;г</li>
+                  <li>Лук 2&nbsp;шт.</li>
                   <li>Головка чеснока</li>
-                  <li>Мука 1 ст. л.</li>
-                  <li>Бульон 500 мл</li>
+                  <li>Мука 1&nbsp;ст. л.</li>
+                  <li>Бульон 500&nbsp;мл</li>
                   <li>Зелень</li>
                 </ul>
               </section>
@@ -510,7 +514,7 @@
                   <li>Оливковое масло</li>
                   <li>головка чеснока</li>
                   <li>банка или свежие томаты</li>
-                  <li>вода 100 мл</li>
+                  <li>вода 100&nbsp;мл</li>
                   <li>базилик</li>
                   <li>спагетти</li>
                   <li>творожный сыр 1–2 упаковки</li>
@@ -551,8 +555,8 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Свино-говяжий фарш 350 г</li>
-                  <li>плавленый сыр 200 г</li>
+                  <li>Свино-говяжий фарш 350&nbsp;г</li>
+                  <li>плавленый сыр 200&nbsp;г</li>
                   <li>любой сыр</li>
                   <li>макароны</li>
                   <li>томатная паста</li>
@@ -604,15 +608,15 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Куриная грудка 4 шт.</li>
+                  <li>Куриная грудка 4&nbsp;шт.</li>
                   <li>орегано</li>
                   <li>лук</li>
                   <li>головка чеснока</li>
-                  <li>томатная паста 1 ч. л.</li>
-                  <li>вяленые томаты 100 г</li>
-                  <li>сливки 20% 250 мл</li>
+                  <li>томатная паста 1&nbsp;ч. л.</li>
+                  <li>вяленые томаты 100&nbsp;г</li>
+                  <li>сливки 20% 250&nbsp;мл</li>
                   <li>шпинат 8–10 листьев</li>
-                  <li>пармезан 50 г</li>
+                  <li>пармезан 50&nbsp;г</li>
                   <li>укроп</li>
                   <li>рис</li>
                   <li>растительное и сливочное масло</li>
@@ -662,11 +666,11 @@
                   
                 </div>
                 <ul class="ingredients-list">
-                  <li>Яйца 2 шт.</li>
-                  <li>молоко 60 мл</li>
-                  <li>мука 60 г</li>
+                  <li>Яйца 2&nbsp;шт.</li>
+                  <li>молоко 60&nbsp;мл</li>
+                  <li>мука 60&nbsp;г</li>
                   <li>щепотка соли</li>
-                  <li>сахар 6 ч. л.</li>
+                  <li>сахар 6&nbsp;ч. л.</li>
                 </ul>
               </section>
               <section class="panel">
@@ -707,7 +711,7 @@
                 </div>
                 <ul class="ingredients-list">
                   <li>Рис</li>
-                  <li>куриный фарш 500 г</li>
+                  <li>куриный фарш 500&nbsp;г</li>
                   <li>лук</li>
                   <li>панировочные сухари</li>
                   <li>головка чеснока</li>
@@ -717,13 +721,13 @@
                   <li>зелёный лук</li>
                   <li>пергамент</li>
                   <li class="ingredient-group">Соус:</li>
-                  <li>Вода 90 мл</li>
-                  <li>Соевый соус 60 мл</li>
-                  <li>Рисовый уксус 1 ч. л.</li>
-                  <li>Кунжутное масло 1 ст. л.</li>
+                  <li>Вода 90&nbsp;мл</li>
+                  <li>Соевый соус 60&nbsp;мл</li>
+                  <li>Рисовый уксус 1&nbsp;ч. л.</li>
+                  <li>Кунжутное масло 1&nbsp;ст. л.</li>
                   <li>Чеснок</li>
-                  <li>Сахар 2 ч. л.</li>
-                  <li>Кукурузный крахмал 2 ч. л.</li>
+                  <li>Сахар 2&nbsp;ч. л.</li>
+                  <li>Кукурузный крахмал 2&nbsp;ч. л.</li>
                   <li class="ingredient-group">Добавка:</li>
                   <li>Брокколи</li>
                 </ul>
@@ -805,12 +809,12 @@
                 </div>
                 <ul class="ingredients-list">
                   <li>Пергамент</li>
-                  <li>яблоки 2–3 шт.</li>
+                  <li>яблоки 2–3&nbsp;шт.</li>
                   <li>мёд</li>
                   <li>сливочное масло</li>
                   <li>сахар</li>
                   <li>корица</li>
-                  <li>слоёное бездрожжевое тесто 250 г</li>
+                  <li>слоёное бездрожжевое тесто 250&nbsp;г</li>
                   <li>яичный желток.</li>
                 </ul>
               </section>
@@ -895,22 +899,22 @@
                 </div>
                 <ul class="ingredients-list">
                   <li class="ingredient-group">Тесто:</li>
-                  <li>Мука 200 г</li>
+                  <li>Мука 200&nbsp;г</li>
                   <li>Соль ½ ч. л.</li>
-                  <li>Сахар 1 ст. л.</li>
-                  <li>Сливочное масло 100 г</li>
+                  <li>Сахар 1&nbsp;ст. л.</li>
+                  <li>Сливочное масло 100&nbsp;г</li>
                   <li>Яйцо</li>
                   <li class="ingredient-group">Начинка:</li>
-                  <li>Ежевика, смородина и слива 400 г</li>
-                  <li>Сахар 50 г</li>
-                  <li>Кукурузный крахмал 20 г</li>
-                  <li>Вода 40 мл</li>
+                  <li>Ежевика, смородина и слива 400&nbsp;г</li>
+                  <li>Сахар 50&nbsp;г</li>
+                  <li>Кукурузный крахмал 20&nbsp;г</li>
+                  <li>Вода 40&nbsp;мл</li>
                   <li class="ingredient-group">Крем:</li>
-                  <li>Яйца 3 шт.</li>
-                  <li>Сахар 120 г</li>
-                  <li>Кукурузный крахмал 50 г</li>
-                  <li>Сметана 20% 350 г</li>
-                  <li>Сливки 20% 200 мл</li>
+                  <li>Яйца 3&nbsp;шт.</li>
+                  <li>Сахар 120&nbsp;г</li>
+                  <li>Кукурузный крахмал 50&nbsp;г</li>
+                  <li>Сметана 20% 350&nbsp;г</li>
+                  <li>Сливки 20% 200&nbsp;мл</li>
                 </ul>
               </section>
               <section class="panel">
@@ -949,21 +953,21 @@
                 </div>
                 <ul class="ingredients-list">
                   <li class="ingredient-group">Коржи:</li>
-                  <li>Яйца 2 шт.</li>
-                  <li>Сгущённое молоко 380 г</li>
-                  <li>Сливочное масло 40 г</li>
-                  <li>Мука 140 г</li>
-                  <li>Разрыхлитель 1 ч. л.</li>
+                  <li>Яйца 2&nbsp;шт.</li>
+                  <li>Сгущённое молоко 380&nbsp;г</li>
+                  <li>Сливочное масло 40&nbsp;г</li>
+                  <li>Мука 140&nbsp;г</li>
+                  <li>Разрыхлитель 1&nbsp;ч. л.</li>
                   <li>Соль</li>
                   <li class="ingredient-group">Прослойка:</li>
-                  <li>Черника 400 г</li>
-                  <li>Сахар 100 г</li>
-                  <li>Кукурузный крахмал 30 г</li>
-                  <li>Вода 50 мл</li>
+                  <li>Черника 400&nbsp;г</li>
+                  <li>Сахар 100&nbsp;г</li>
+                  <li>Кукурузный крахмал 30&nbsp;г</li>
+                  <li>Вода 50&nbsp;мл</li>
                   <li class="ingredient-group">Крем:</li>
-                  <li>Творожный сыр 400 г</li>
-                  <li>Сахарная пудра 100 г</li>
-                  <li>Сливки 33% 500 мл</li>
+                  <li>Творожный сыр 400&nbsp;г</li>
+                  <li>Сахарная пудра 100&nbsp;г</li>
+                  <li>Сливки 33% 500&nbsp;мл</li>
                   <li>Ванильный экстракт</li>
                 </ul>
               </section>
@@ -1077,13 +1081,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const recipeTitles = Array.from(recipeCards).map(card => card.querySelector('h3').textContent.trim());
 
-  // Функция для плавной прокрутки к рецепту
   function scrollToRecipe(titleText) {
     const targetCard = Array.from(recipeCards).find(card => card.querySelector('h3').textContent.trim() === titleText);
     if (targetCard) {
       setTimeout(() => {
         targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 150); // Небольшая задержка, чтобы фильтр успел отработать
+      }, 150);
     }
   }
 
@@ -1092,7 +1095,6 @@ document.addEventListener('DOMContentLoaded', function() {
     autocompleteList.innerHTML = '';
     let hasVisibleRecipes = false;
 
-    // Фильтрация карточек
     sections.forEach(section => {
       let sectionHasVisible = false;
       section.querySelectorAll('.recipe-card').forEach(recipe => {
@@ -1108,10 +1110,8 @@ document.addEventListener('DOMContentLoaded', function() {
       section.style.display = sectionHasVisible ? '' : 'none';
     });
 
-    // Выпадающий список подсказок
     if (searchText.length > 0) {
       const matches = recipeTitles.filter(title => title.toLowerCase().includes(searchText)).slice(0, 3);
-      
       if (matches.length > 0) {
         autocompleteList.style.display = 'block';
         matches.forEach(match => {
@@ -1121,12 +1121,11 @@ document.addEventListener('DOMContentLoaded', function() {
           div.onmouseover = () => div.style.background = 'rgba(255,255,255,.05)';
           div.onmouseout = () => div.style.background = 'transparent';
           
-          // Клик по подсказке
           div.onclick = () => {
             searchInput.value = match;
             autocompleteList.style.display = 'none';
-            searchInput.dispatchEvent(new Event('input')); // Запускаем фильтр
-            scrollToRecipe(match); // Прокручиваем к рецепту
+            searchInput.dispatchEvent(new Event('input'));
+            scrollToRecipe(match);
           };
           autocompleteList.appendChild(div);
         });
@@ -1138,10 +1137,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Прокрутка при нажатии Enter в поле поиска
   searchInput.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
-      e.preventDefault(); // Предотвращаем стандартное поведение
+      e.preventDefault();
       const firstVisibleRecipe = Array.from(recipeCards).find(card => card.style.display !== 'none');
       if (firstVisibleRecipe) {
         firstVisibleRecipe.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1149,11 +1147,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Скрываем подсказки при клике вне поиска
   document.addEventListener('click', function(e) {
     if (e.target !== searchInput) autocompleteList.style.display = 'none';
   });
+
+  // Логика навигации (ВНУТРИ DOMContentLoaded)
+  document.querySelectorAll('.category-nav a, .feature-card').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (searchInput.value !== '') {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+      }
+
+      // 150мс — идеальное время, чтобы браузер пересчитал высоту страницы
+      setTimeout(() => {
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150); 
+    });
+  });
 });
-  </script>
+</script>
 </body>
 </html>
